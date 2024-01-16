@@ -6,7 +6,7 @@ let arr = [1, 1, 1];
 let check = arr[0];
 let equal = true;
 for (let i = 0; i < arr.length; i++) {
-  if (arr[i] != check) {
+  if (arr[i] !== check) {
     equal = false;
   }
 }
