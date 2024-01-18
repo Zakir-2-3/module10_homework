@@ -8,14 +8,19 @@
 
 // *NaN, хоть и относится к типу Number, числом не является. Добавьте отдельную проверку для этого значения.
 
-const number = +prompt('Введите число');
+const number = prompt('Введите число');
+const numberUnarn = +number;
 
-if(isNaN(number) || typeof(number) !== 'number') {
+if (number.trim() === '') {
+    console.log('Вы отменили ввод или ввели пустую строку');
+} else {
+  if(isNaN(numberUnarn) || typeof(numberUnarn) !== 'number') {
         console.log('Упс, кажется, вы ошиблись')
-    }else{
-        if(number %  2 === 0){
+    } else{
+        if(numberUnarn %  2 === 0){
             console.log('Чётное')
-            }else{
+            } else{
             console.log('Нечётное')
             }
         }
+}
